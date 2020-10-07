@@ -1,0 +1,20 @@
+.footer {
+    display: flex;
+    align-items:center;
+    height:100px;
+    width:100%;
+}
+
+.footer a {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Muli', sans-serif;
+  padding-left: 30px;
+
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

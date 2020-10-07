@@ -1,0 +1,11 @@
+para que te funcione todo el proyecto 
+
+primero tienes que activar el json-server asi:
+
+$ json-server initialState.json
+
+y luego corres el proyecto con el siguiente comando:
+
+$ npm run start
+
+y listo eso era todo :)

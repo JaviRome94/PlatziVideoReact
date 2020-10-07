@@ -1,0 +1,16 @@
+
+@import './Vars.scss';
+@import './Media.scss';
+
+body{
+    margin: 0px;
+    font-family: $theme-font;
+    color: white;
+    /* background: #7209b7; */
+    background: $main-color;
+    /* height: 500pt; */
+}
+
+* {
+    box-sizing: border-box;
+}

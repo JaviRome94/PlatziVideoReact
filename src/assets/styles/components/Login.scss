@@ -1,0 +1,105 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 30px;
+  min-height: calc(100vh - 200px);
+  margin-top: 60px;
+}
+
+.login__contenedor {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 40px;
+  padding: 60px 68px 40px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.login__contenedor--form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.login__contenedor--form label {
+  font-size: 14px;
+}
+
+.login__contenedor--recuerdame {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.login__contenedor--recuerdame a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.login__contenedor--recuerdame a:hover {
+  text-decoration: underline;
+}
+
+.login__contenedor--social-media div {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.login__contenedor--social-media img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.login__contenedor--registro {
+  font-size: 14px;
+}
+
+.login__contenedor--registro a {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  margin-left: 8px;
+  text-decoration: none;
+}
+
+.login__contenedor--registro a:hover {
+  text-decoration: underline;
+}
+
+.input {
+  background-color: transparent;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 0px 20px;
+  outline: none;
+  height: 50px;
+}
+
+.input::placeholder {
+  color: white;
+}
+
+.button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Muli", sans-serif;
+  height: 50px;
+  letter-spacing: 1px;
+  outline: none;
+}

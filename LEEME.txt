@@ -1,10 +1,6 @@
-para que te funcione todo el proyecto 
+para que te funcione todo el proyecto del curso de react router con redux
 
-primero tienes que activar el json-server asi:
-
-$ json-server initialState.json
-
-y luego corres el proyecto con el siguiente comando:
+solo corres el siguiente comando:
 
 $ npm run start
 

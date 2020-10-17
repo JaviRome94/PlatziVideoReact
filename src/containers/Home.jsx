@@ -1,45 +1,52 @@
 
 import React, { useState, useEffect } from 'react';
-import Header from '../components/Header';
+import { connect } from 'react-redux';
 import Search from '../components/Search';
 import Categorias from '../components/Categorias';
 import Carousel from '../components/Carousel';
 import CarouselItem from '../components/Carousel-item';
-import Footer from '../components/Footer';
-import useInitialState from '../hooks/useInitialState';
 import '../assets/styles/App.scss';
 
-const API = 'http://localhost:3000/initalState';
-
-
-const Home = () => {
- const InitialState = useInitialState(API);
+const Home = ({ mylist, trends, originals }) => {
   return (
-    <div className='App'>
-      <Header />
+    <>
       <Search />
-      {InitialState.mylist.length > 0 && ( 
+      {mylist.length > 0 && (
         <Categorias title='Mi lista'>
           <Carousel>
-            {InitialState.trends.map((item) => <CarouselItem key={item.id} {...item} />)}
+            {mylist.map((item) => (
+              <CarouselItem
+                key={item.id}
+                {...item}
+                islist
+              />
+            ))}
           </Carousel>
         </Categorias>
       )}
 
       <Categorias title='Tendencias'>
         <Carousel>
-          {InitialState.trends.map((item) => <CarouselItem key={item.id} {...item} />)}
+          {trends.map((item) => <CarouselItem key={item.id} {...item} />)}
         </Carousel>
       </Categorias>
 
       <Categorias title='Estrenos'>
         <Carousel>
-          {InitialState.trends.map((item) => <CarouselItem key={item.id} {...item} />)}
+          {originals.map((item) => <CarouselItem key={item.id} {...item} />)}
         </Carousel>
       </Categorias>
-
-      <Footer />
-    </div>
+    </>
   );
 };
-export default Home;
+
+const mapStateToProps = (state) => {
+
+  return {
+    mylist: state.mylist,
+    trends: state.trends,
+    originals: state.originals,
+  };
+};
+
+export default connect(mapStateToProps, null)(Home);
